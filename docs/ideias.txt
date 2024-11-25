@@ -1,0 +1,47 @@
+componentes reutilizaveis:
+
+Botões
+Botões personalizados, como botões de "confirmar", "cancelar", "enviar", ou até botões de redes sociais (Facebook, Twitter, etc.).
+Cada botão pode ter estilos e comportamentos próprios, mas ser baseado em um componente de botão principal.
+2. Formulários e Campos de Entrada
+Componentes como <Input>, <Textarea>, <Select>, e até formulários completos com validação.
+Exemplo: um campo de entrada de e-mail com validação, que pode ser reutilizado em várias partes do projeto.
+3. Modais (Janelas Pop-up)
+Modais (ou pop-ups) para exibir informações, formulários ou mensagens de confirmação.
+Um modal genérico pode ser configurado para aceitar conteúdo personalizado, como mensagens de erro, formulários de login, etc.
+4. Cards
+Componentes de card para exibir informações organizadas, como perfis de usuário, produtos, artigos, etc.
+Exemplo: um componente de card de produto que exibe a imagem, o nome e o preço de um produto.
+5. Menus e Navegação
+Componentes de menu, dropdowns, e barras de navegação.
+Exemplo: uma barra de navegação com links e ícones que pode ser reutilizada em várias páginas.
+6. Alertas e Notificações
+Componentes para mensagens de alerta, como sucesso, erro, aviso, e informações.
+Exemplo: um alerta que aparece no topo da página quando há uma notificação importante.
+7. Ícones e Botões de Ação
+Ícones específicos, como de "editar", "deletar", "adicionar aos favoritos", etc.
+Componentes de ícones podem ser personalizados com cores e tamanhos diferentes, mas mantêm o mesmo estilo.
+8. Avatares e Perfis de Usuário
+Componentes para exibir a foto do usuário, nome e talvez informações adicionais, como status online/offline.
+Isso é útil em aplicações onde é necessário mostrar informações do usuário em várias partes da interface.
+9. Carrosséis e Sliders
+Componentes de carrossel para exibir imagens, produtos, depoimentos, etc.
+Um carrossel reutilizável pode ser configurado com diferentes conteúdos e estilos.
+10. Tabelas e Linhas de Tabela
+Tabelas reutilizáveis para exibir dados, como listas de produtos, usuários, ou transações.
+Componentes de linha de tabela, que aceitam dados dinâmicos e podem ser repetidos para preencher a tabela inteira.
+11. Breadcrumbs (Trilhas de Navegação)
+Componentes que mostram o caminho de navegação do usuário em um site.
+Exemplo: "Início > Produtos > Eletrônicos > Celulares".
+12. Carregadores e Indicadores de Progresso
+Spinners e barras de progresso que indicam carregamento ou processamento.
+Úteis para mostrar feedback visual quando uma ação está sendo processada.
+13. Tooltips (Dicas)
+Pequenas janelas com informações que aparecem quando o usuário passa o mouse sobre um elemento.
+Podem ser usadas em botões, ícones ou links que precisam de explicação adicional.
+14. Layouts de Grid e Containers
+Componentes de layout que ajudam a organizar elementos em grids ou em containers responsivos.
+Exemplo: um container de 3 colunas que pode ser reutilizado em várias páginas para exibir conteúdos diferentes.
+15. Footers e Headers
+Cabeçalhos e rodapés que contêm informações fixas e são usados em várias páginas.
+O header pode ter uma barra de navegação e um logotipo, enquanto o footer pode ter links e informações de contato.

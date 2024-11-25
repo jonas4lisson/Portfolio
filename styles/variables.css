@@ -1,0 +1,223 @@
+/*  Variáveis globais (cores, espaçamentos, etc.) */
+
+/* Estilos do corpo */
+
+@font-face {
+  font-family: 'celtic';
+  src: url('../assets/fonts/CELTG___.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lr';
+  src: url('../assets/fonts/RINGM___.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Celtic', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Configuração do container principal da navbar ------------------------------------------------*/
+.container-fluid {
+  display: flex;
+    justify-content: space-between; /* Separa os itens em extremos opostos */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0%;
+    margin-left: 2%;
+    margin-right: 4%;
+    font-size: large;
+}
+
+  p{
+    font-size: 22px;
+  }
+  
+  /* Modo claro ------------------------------------------------------------*/
+  body.light {
+    background-color: #ced4da !important; /* Cor de fundo clara para o body */
+    color: #000000; /* Cor do texto no modo claro */
+}
+
+body.light .nav-link {
+    color: #000000; /* Cor dos links no modo claro */
+}
+
+nav.light {
+    background-color: #adb5bd !important; /* Cor de fundo clara para o navbar */
+}
+
+nav.light .nav-link {
+    color: #000000; /* Cor dos links do navbar no modo claro */
+}
+  
+  /* Modo escuro --------------------------------------------------------*/
+  body.dark {
+    background-color: #343a40 !important; /* Cor de fundo escuro para o body */
+    color: #ffffff; /* Cor do texto para modo escuro */
+}
+
+body.dark .nav-link {
+    color: #ffffff; /* Cor dos links no modo escuro */
+}
+
+nav.dark {
+    background-color: #212529 !important; /* Cor de fundo escura para o navbar 1c1c1c*/
+    color: #ffffff;
+}
+
+nav.dark .nav-link {
+    color: #ffffff; /* Cor dos links no navbar em modo escuro */
+}
+
+/* Estilo para o link "Contato" quando selecionado -----------------------*/
+.nav-link.selected {
+  color: #457B9D !important; /* Cor do texto do link "Contato" quando selecionado */
+}
+
+/* Cor ao passar o mouse (hover) */
+.navbar-nav .nav-link:hover {
+  color: #457B9D; /* Cor desejada ao passar o mouse */
+}
+
+/* Estilo para o <li> selecionado */
+.dropdown-menu .dropdown-item.selected {
+  background-color: lightgray; /* Cor de fundo do <li> selecionado */
+}
+
+/* Cor padrão do texto do <li> */
+.dropdown-menu .dropdown-item {
+  color: black; /* Cor padrão do texto do <li> */
+}
+
+/* Estilo para o link dentro do <li> */
+.dropdown-menu .dropdown-item a {
+  color: inherit; /* Mantém a cor padrão para os links */
+  text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para mostrar o dropdown */
+.dropdown-menu.show {
+  display: block; /* Exibe o dropdown */
+}
+  
+  /* Estilo do botão de alternar ---------------ok----------------------------*/
+  .modo-dark {
+    margin: auto; /*centralisa o botao sem deslocar a margem*/
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;  /* Remover o fundo do botão */
+    border: none;             /* Remover borda */
+    padding: 0;               /* Remover o padding */
+    cursor: pointer;         /* Apontar para cursor de clique */
+    display: flex;    /* Faz com que o botão ocupe apenas o espaço necessário */
+    justify-content: center;  /* Centraliza a imagem horizontalmente */
+    align-items: center;      /* Centraliza a imagem verticalmente */
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s;
+  }
+  
+  .modo-dark:hover {
+    transform: scale(1.2);
+
+  }
+
+.modo-dark img {
+    width: 100%;  /* Ajuste o tamanho da imagem conforme necessário */
+    height:100%; /* Ajuste o tamanho da imagem conforme necessário */
+  }
+  
+  /*--------------------------------ok---------------------------------------*/
+.navbar-left{
+    display: flex;
+    align-items: center;
+    font-family: 'lr', Arial, sans-serif;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+/* Espaçamento entre a imagem e o título */
+.navbar-left img {
+    margin-right: 1rem; /* Espaço entre a imagem e o título */
+}
+
+/*----------------------------------ok----------------------------------------*/
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 18px;
+}
+
+/* para links e botao do nav */
+.nav-item{
+  margin-left: 3rem; /* epaçamento entre os itens */
+    position: relative;         /* Necessário para posicionar a linha */
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;      /* Remove sublinhado de links */
+  }
+  
+  /* Estilo da linha que aparece ao passar o mouse ----------ok--------------*/
+  .nav-item::after{
+    content: "";                /* Cria um elemento vazio para a linha */
+    position: absolute;
+    bottom: 5px;                  /* Posiciona a linha mais proximo do texto */
+    left: 50%;
+    width: 0;                   /* Inicialmente oculta a linha */
+    height: 2px;                /* Altura da linha (ajuste conforme necessário) */
+    background-color: #495057;  /* Cor da linha (ajuste conforme necessário) */
+    transition: width 0.7s, opacity 0.5s;     /* Animação suave para a linha width 0.7s, opacity 0.5s*/
+    opacity: 0;
+    transform-origin: center;   /* Define o ponto de início da expansão no centro */
+    transform: translateX(-50%); /* Alinha a linha ao centro do elemento */
+  }
+  
+  /* Ao passar o mouse, expande a linha */
+  .nav-item:hover::after {
+    width: 100%;  
+    opacity: 1;
+  }
+
+  .nav-item:hover{
+    transform: scale(1.2);
+    transition: background-color 0.3s, transform 0.7s; /*background-color 0.3s, transform 0.7s*/
+  }
+  
+  /*-----------------------------falta dentro do drop-----------------------------------------*/
+  .dropdown-menu {
+    position: absolute;          /* Garante que o menu esteja posicionado relativo ao botão */
+    visibility: hidden;              /* Torna o dropdown invisível inicialmente */
+    opacity: 0;                   /* Define opacidade inicial como zero (invisível) */
+    transform: translateY(-50%); /* Centraliza o dropdown em relação ao botão */
+    top: 100%;                   /* Posiciona o dropdown diretamente abaixo do botão */
+    z-index: 1000; /* Garante que o dropdown esteja acima de outros elementos */
+    transition: opacity 0.3s ease, transform 0.3s ease;  
+    pointer-events: none;         /* Desativa a interação com o dropdown enquanto invisível */
+  }
+
+  /* Exibe o dropdown ao passar o mouse */
+.nav-item.dropdown.show-dropdown .dropdown-menu {
+  opacity: 1;   /* Torna o dropdown visível */
+  transform: translateY(0); /* Expande o dropdown na direção Y */
+  visibility: visible;             /* Torna o dropdown visível */
+  pointer-events: auto;            /* Permite interação com o dropdown quando visível */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transições sem delay */
+}
+
+/* Quando o mouse sai (fecha o dropdown) */
+.nav-item.dropdown:not(.show-dropdown) .dropdown-menu {
+  opacity: 0;   /* Torna o dropdown invisível */
+  transform: translateY(-50%); /* Encolhe o dropdown na direção Y */
+  visibility: hidden;              /* Torna o dropdown invisível */
+  pointer-events: none;            /* Desativa interação quando invisível */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transições sem delay */
+
+}
